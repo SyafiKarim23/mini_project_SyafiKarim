@@ -1,0 +1,61 @@
+.Card1 {
+    text-align: center;
+    display: inline;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.navbar {
+    overflow: hidden;
+    font-size: 18px;
+    padding: 8px;
+    text-align: left;
+}
+
+.navbar a {
+    float: left;
+    color: dodgerblue;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: dodgerblue;
+    color: white;
+
+}
+
+.navbar-right {
+    float: right;
+    padding: 0px 10px 0px 10px;
+
+}
+
+.content {
+    text-align: center;
+}
+
+.Forminput {
+    text-align: left;
+    padding: 0px 300px 0px 300px;
+}
+
+.select {
+    width: 280px;
+}
+
+.submit {
+    width: 500px;
+    text-align: center;
+}

@@ -1,0 +1,61 @@
+h4 {
+    color: #191970;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.konten{
+    text-align: center;
+    font-size: 15px;
+}
+
+.foto{
+    align-items: center;
+}
+
+.card{
+    width: 40vh;
+    height: 30vh;
+    border-color: white;
+}
+
+.row{
+    justify-content: center;
+}
+
+
+
+.row2{
+    justify-content: center;
+}
+
+.card2{
+    width: 40vh;
+    height: 40vh;
+}
+
+
+.konten{
+    text-align: left;
+    font-size: small;
+}
+
+.foto2{
+    width: 80px;
+    height: 50px;
+}
+/* .card {
+    text-align: center;
+}
+.card2 {
+    text-align: left;
+} */
+
+/* .usercard {
+    background-color: ghostwhite;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 0px;
+} */
