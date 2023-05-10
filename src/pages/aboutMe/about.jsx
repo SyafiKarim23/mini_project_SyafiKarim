@@ -8,24 +8,10 @@ import LoadingComponent from "../../components/loadingComponent/loadingComponent
 import { Card, Row, Col, Input } from "antd";
 import { useQuery } from "@apollo/client";
 import { GET_BARANG } from "../CRUD/query/users-query-barang";
-import Gap from "../../components/gap/gap";
 import { SearchOutlined } from "@ant-design/icons";
 import HeaderComponents from "../../components/layouts/Header/HeaderComponents";
 
 const about = () => {
-  // const { id } = useParams();
-
-  // // Get user data
-  // const [isLoadingUsersData, usersData, getUsersData] = useGetUsers();
-
-  // console.log({ usersData });
-
-  // // hooks aktifasi
-  // useEffect(() => {
-  //   getUsersData();
-  // }, []);
-
-  // Get Data
   const {
     data: barangData,
     loading: isBarangLoading,
