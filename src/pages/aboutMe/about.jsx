@@ -1,15 +1,9 @@
-// import React, { useEffect, } from "react";
 import React, { useState } from "react";
-// import { useParams, Link } from "react-router-dom";
 import "./about.css";
-import { USERS_DATA } from "./constants";
-// import { useGetUsers } from "./hooks/useUsersData";
 import LoadingComponent from "../../components/loadingComponent/loadingComponent";
 import { Card, Row, Col, Input } from "antd";
 import { useQuery } from "@apollo/client";
 import { GET_BARANG } from "../CRUD/query/users-query-barang";
-import { SearchOutlined } from "@ant-design/icons";
-import HeaderComponents from "../../components/layouts/Header/HeaderComponents";
 
 const about = () => {
   const {
@@ -40,18 +34,6 @@ const about = () => {
           ))
         )}
       </Row>
-
-      {/* {isLoadingUsersData ? (
-        <LoadingComponent />
-      ) : (
-        usersData?.map((user) => (
-          <Card title={user.firstName + " " + user.lastName} key={user.id}>
-            <div>{user.age}</div>
-            <div>{user.hobby}</div>
-            <div>{user.address}</div>
-          </Card>
-        ))
-      )} */}
     </div>
   );
 };

@@ -29,8 +29,7 @@ const ReactCaptone = () => {
             </Col>
           </Card>
 
-          <Gap height={10} />
-
+          <Gap />
           <Card
             className="card2"
             hoverable
