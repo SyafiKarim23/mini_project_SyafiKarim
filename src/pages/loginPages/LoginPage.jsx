@@ -1,12 +1,11 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Card, Form, Input, Modal, Radio, Row } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Gap from "../../components/gap/Gap";
-import { useGetProfile, useRegister } from "./hooks/useAuth";
 import "./login.css";
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PROFILE, GET_PROFILE } from "./query/profile-query";
+import Gap from "../../components/gap/gap";
 
 const LoginPage = () => {
   const [form] = Form.useForm();
@@ -30,14 +29,6 @@ const LoginPage = () => {
     // Mengecek apakah user sudah ada sesuai data hasura
     const isUser = profile.find((item) => item.username === values.username);
 
-    // const newValues = {
-    //   __typename: "profile",
-    //   password: values.password,
-    //   username: values.username,
-    // };
-
-    // Mengecek apakah user sudah terferifikasi di hasura
-    // const isVerified = JSON.stringify(newValues) === JSON.stringify(isUser);
     const isVerified = JSON.stringify(isUser) === JSON.stringify(values);
     if (isVerified) {
       localStorage.setItem("token", true);
@@ -103,10 +94,7 @@ const LoginPage = () => {
 
   return (
     <div className="container-center">
-      <Card
-        title="WELCOME To Web React SyafiKarim "
-        bodyStyle={{ width: "350px" }}
-      >
+      <Card title="Toko Pertanian MH Jaya" bodyStyle={{ width: "350px" }}>
         <Row justify="center">
           <Radio.Group
             defaultValue="Login"

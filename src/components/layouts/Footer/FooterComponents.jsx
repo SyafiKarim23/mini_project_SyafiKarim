@@ -8,6 +8,7 @@ const FooterComponents = () => {
     <Footer
       style={{
         textAlign: "center",
+        background: "green",
       }}
     >
       Ant Design ©2023 Created by Ant UED

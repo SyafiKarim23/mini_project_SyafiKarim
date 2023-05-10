@@ -3,15 +3,11 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import LoadingComponent from "../components/loadingComponent/loadingComponent";
 import LayoutComponent from "../components/layouts/LayoutComponent";
 import FormComponents from "../pages/form/FormComponents";
-import HomePage from "../pages/homePage/HomePage";
 import AboutMe from "../pages/aboutMe/about";
-import Portfolio from "../pages/Portfolio/Portfolio";
-import FormComponentExp from "../pages/formExample/FormComponentExp";
-import CreateProduct from "../pages/createProduct/createProduct";
-import FormCRUD from "../pages/CRUD/FormCRUD";
 import Landingpage from "../pages/LandingPage/landingpage";
+import FormCRUD_graphpt from "../pages/CRUD/crudBarang/FormCRUD-graph";
 import LoginPage from "../pages/loginPages/LoginPage";
-import Beranda from "../pages/beranda/beranda";
+import ReactCaptone from "../pages/feature/tentangKami";
 
 const RouteManagement = () => {
   const token = localStorage.getItem("token");
@@ -27,18 +23,17 @@ const RouteManagement = () => {
     <Suspense fallback={<LoadingComponent />}>
       {!token ? (
         <Routes>
-          <Routes path="/" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
         </Routes>
       ) : (
         <LayoutComponent>
           <Routes>
             <Route path="/form" element={<FormComponents />} />
-            <Route path="/home" element={<HomePage />} />
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/aboutme/:id" element={<AboutMe />} />
-            <Route path="/FormCRUD" element={<FormCRUD />} />
             <Route path="/landingpage" element={<Landingpage />} />
-            <Route path="/beranda" element={<Beranda />} />
+            <Route path="/crudbarangpt" element={<FormCRUD_graphpt />} />
+            <Route path="/feature" element={<ReactCaptone />} />
           </Routes>
         </LayoutComponent>
       )}

@@ -3,7 +3,6 @@ import { Menu, Layout, Row } from "antd";
 import { MENU_ITEM } from "../constants";
 import { Link } from "react-router-dom";
 import "./HeaderComponents.css";
-import { Input, Button } from "antd";
 
 const HeaderComponents = () => {
   const { Header } = Layout;
@@ -24,18 +23,18 @@ const HeaderComponents = () => {
       }}
     >
       <Row justify="space-between">
-        <Link to="/beranda">
+        <Link to="/feature">
           <div
             style={{
               float: "left",
               width: 120,
               height: 31,
               margin: "16px 24px 16px 0",
-              background: "white",
+              background: "green",
             }}
             onClick={() => setCurrent("")}
           />
-          <>Toko Pertanian</>
+          <>Toko Pertanian MH JAYA</>
         </Link>
 
         <Menu
