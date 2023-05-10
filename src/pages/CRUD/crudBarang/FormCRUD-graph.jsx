@@ -10,21 +10,20 @@ import {
   Typography,
   Upload,
   message,
+  InputNumber,
 } from "antd";
 import React, { useEffect, useState } from "react";
-// import Gap from "../../../components/gap/Gap";
 import Gap from "../../../components/gap/gap";
-// import LoadingComponent from "../../../components/loadingComponent/LoadingComponent";
 import LoadingComponent from "../../../components/loadingComponent/loadingComponent";
 import { uploaderConfig } from "../../../config/uploader-config";
 import { useSingleUploader } from "../../../hooks/useSingleUploader";
-import { INITIAL_TABLE_DATA } from "../constants";
+import { INITIAL_TABLE_DATA } from "../constant";
 import {
-  ADD_USER,
-  DELETE_USER,
-  GET_USERS,
-  UPDATE_USER,
-} from "../query/users-query";
+  ADD_BARANG,
+  DELETE_BARANG,
+  GET_BARANG,
+  UPDATE_BARANG,
+} from "../query/users-query-barang";
 
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
@@ -34,7 +33,7 @@ const getBase64 = (file) =>
     reader.onerror = (error) => reject(error);
   });
 
-const FormCRUD_graph = () => {
+const FormCRUD_graphpt = () => {
   const { Title } = Typography;
   const { TextArea } = Input;
   const [formBio] = Form.useForm();
@@ -42,27 +41,27 @@ const FormCRUD_graph = () => {
 
   // Get Data
   const {
-    data: usersData,
-    loading: isUsersLoading,
+    data: barangData,
+    loading: isBarangLoading,
     error: usersError,
-  } = useQuery(GET_USERS);
+  } = useQuery(GET_BARANG);
 
   // Add Data
-  const [addUser, { loading: loadingAddUser }] = useMutation(ADD_USER, {
-    refetchQueries: [GET_USERS],
+  const [addUser, { loading: loadingAddUser }] = useMutation(ADD_BARANG, {
+    refetchQueries: [GET_BARANG],
   });
 
   // Update Data
-  const [updateUser, { loading: loadingUpdateUser }] = useMutation(
-    UPDATE_USER,
+  const [updateBarang, { loading: loadingUpdateBarang }] = useMutation(
+    UPDATE_BARANG,
     {
-      refetchQueries: [GET_USERS],
+      refetchQueries: [GET_BARANG],
     }
   );
 
   // Delete Data
-  const [deleteUser, { loading: loadingDelete }] = useMutation(DELETE_USER, {
-    refetchQueries: [GET_USERS],
+  const [deleteUser, { loading: loadingDelete }] = useMutation(DELETE_BARANG, {
+    refetchQueries: [GET_BARANG],
   });
 
   // Upload Image
@@ -73,36 +72,26 @@ const FormCRUD_graph = () => {
 
   const TABLE_COLUMNS = [
     {
-      title: "Avatar",
+      title: "Gambar Barang",
       dataIndex: "avatar",
       key: "avatar",
       render: (_, record, index) => (
         <img
           src={record.avatar}
           alt={`avatar-${index}`}
-          style={{ height: "30px" }}
+          style={{ height: "50px" }}
         />
       ),
     },
     {
-      title: "First Name",
-      dataIndex: "firstName",
-      key: "firstName",
+      title: "Nama Barang",
+      dataIndex: "namaBarang",
+      key: "namaBarang",
     },
     {
-      title: "Last Name",
-      dataIndex: "lastName",
-      key: "lastName",
-    },
-    {
-      title: "NIM",
-      dataIndex: "nim",
-      key: "nim",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: "Harga Barang",
+      dataIndex: "harga",
+      key: "harga",
     },
     {
       title: "Action",
@@ -129,10 +118,8 @@ const FormCRUD_graph = () => {
     setIsEdit(true);
     setAvatar(row_data.avatar);
     formBio.setFieldsValue({
-      firstName: row_data.firstName,
-      lastName: row_data.lastName,
-      nim: row_data.nim,
-      address: row_data.address,
+      namaBarang: row_data.namaBarang,
+      harga: row_data.harga,
     });
   };
 
@@ -187,7 +174,7 @@ const FormCRUD_graph = () => {
       ...values,
     };
 
-    updateUser({
+    updateBarang({
       variables: { pk_columns: { uuid: uuid }, _set: { ...body } },
       onCompleted: () => {
         handleCancel();
@@ -225,7 +212,7 @@ const FormCRUD_graph = () => {
 
   return (
     <>
-      <Title>Form Biodata Mahasiswa</Title>
+      <Title>Form CRUD Barang</Title>
 
       {/* Form */}
       <Form.Item label="Avatar">
@@ -284,55 +271,33 @@ const FormCRUD_graph = () => {
         }}
       >
         <Form.Item
-          name="firstName"
-          label="First Name"
+          name="namaBarang"
+          label="Nama Barang"
           rules={[
             {
               required: true,
-              message: "Please input your first name!",
+              message: "Silahkan isi Nama Barang!",
             },
           ]}
         >
-          <Input placeholder="Input your first name" />
+          <Input placeholder="Isi Nama Barang" />
         </Form.Item>
 
         <Form.Item
-          name="lastName"
-          label="Last Name"
+          name="harga"
+          label="Harga Barang"
           rules={[
             {
               required: true,
-              message: "Please input your last name!",
+              message: "Silahkan isi Harga Barang!",
             },
           ]}
         >
-          <Input placeholder="Input your last name" />
-        </Form.Item>
-
-        <Form.Item
-          name="nim"
-          label="NIM"
-          rules={[
-            {
-              required: true,
-              message: "Please input your NIM!",
-            },
-          ]}
-        >
-          <Input placeholder="Input your NIM" />
-        </Form.Item>
-
-        <Form.Item
-          name="address"
-          label="Address"
-          rules={[
-            {
-              required: true,
-              message: "Please input your address!",
-            },
-          ]}
-        >
-          <TextArea rows={4} placeholder="Input your address" />
+          <InputNumber
+            placeholder="Isi Harga Barang"
+            style={{ width: "100%" }}
+          />
+          {/* <Input placeholder="Input your harga barang" /> */}
         </Form.Item>
 
         {isEdit ? (
@@ -340,7 +305,7 @@ const FormCRUD_graph = () => {
             <Button
               type="primary"
               htmlType="submit"
-              loading={loadingUpdateUser}
+              loading={loadingUpdateBarang}
             >
               Save
             </Button>
@@ -361,11 +326,11 @@ const FormCRUD_graph = () => {
       <Table
         rowKey="uuid"
         columns={TABLE_COLUMNS}
-        dataSource={usersData?.users}
-        loading={isUsersLoading || loadingDelete}
+        dataSource={barangData?.barang}
+        loading={isBarangLoading || loadingDelete}
       />
     </>
   );
 };
 
-export default FormCRUD_graph;
+export default FormCRUD_graphpt;

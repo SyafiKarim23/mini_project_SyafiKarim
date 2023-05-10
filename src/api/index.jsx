@@ -1,4 +1,4 @@
-import { baseAPI } from "../config/apiService";
+import { baseAPI, uploader } from "../config/apiService";
 
 export const api = {
   getUsers: () => {
@@ -6,6 +6,13 @@ export const api = {
   },
   getUsersById: (id) => {
     return baseAPI.get(`/ users / ${id}`);
+  },
+
+  getBarang: () => {
+    return baseAPI.get(`/barang`);
+  },
+  getBarangById: (id) => {
+    return baseAPI.get(`/ barang / ${id}`);
   },
 
   // API Biodata
@@ -23,5 +30,10 @@ export const api = {
   },
   deleteBiodata: (id) => {
     return baseAPI.delete(`/biodatas/${id}`);
+  },
+
+  // API Image Upload
+  uploader: (body) => {
+    return uploader.post("/dt5fjvwg6/image/upload", body);
   },
 };

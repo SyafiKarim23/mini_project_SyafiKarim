@@ -3,13 +3,22 @@ import { Button } from "antd";
 
 export const MENU_ITEM = [
   {
-    label: <Link to="/beranda">Beranda</Link>,
+    label: <Link to="/feature">Tentang Kami</Link>,
     key: "1",
   },
   {
-    label: <Link to="/landingpage">Pembelian</Link>,
+    label: <Link to="/aboutme">Daftar Barang</Link>,
     key: "2",
   },
+  {
+    label: <Link to="/landingpage">Pembelian</Link>,
+    key: "3",
+  },
+  {
+    label: <Link to="/crudbarangpt">CRUD BARANG</Link>,
+    key: "4",
+  },
+
   {
     label: (
       <Link to="/">
@@ -24,6 +33,6 @@ export const MENU_ITEM = [
         </Button>
       </Link>
     ),
-    key: "3",
+    key: "5",
   },
 ];

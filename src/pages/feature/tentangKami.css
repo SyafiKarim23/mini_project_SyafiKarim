@@ -45,17 +45,7 @@ h4 {
     width: 80px;
     height: 50px;
 }
-/* .card {
-    text-align: center;
-}
-.card2 {
-    text-align: left;
-} */
 
-/* .usercard {
-    background-color: ghostwhite;
-    color: black;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 10px 0px;
-} */
+.judul{
+    font-weight: bold;
+}
