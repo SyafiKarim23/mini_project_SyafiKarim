@@ -13,7 +13,7 @@ import {
   InputNumber,
 } from "antd";
 import React, { useEffect, useState } from "react";
-import Gap from "../../../components/gap/gap";
+import Gap from "../../../components/gap/Gap";
 import LoadingComponent from "../../../components/loadingComponent/loadingComponent";
 import { uploaderConfig } from "../../../config/uploader-config";
 import { useSingleUploader } from "../../../hooks/useSingleUploader";
