@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PROFILE, GET_PROFILE } from "./query/profile-query";
-import Gap from "../../components/gap/gap";
+import Gap from "../../components/gap/Gap";
 
 const LoginPage = () => {
   const [form] = Form.useForm();
