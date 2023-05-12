@@ -4,6 +4,7 @@ import LoadingComponent from "../../components/loadingComponent/loadingComponent
 import { Card, Row, Col, Button } from "antd";
 import { useQuery } from "@apollo/client";
 import { GET_BARANG } from "../CRUD/query/users-query-barang";
+import Gap from "../../components/gap/gap";
 
 function toUpperCaseFirstLetter(str) {
   return str.replace(/\b[a-z]/g, function (match) {
