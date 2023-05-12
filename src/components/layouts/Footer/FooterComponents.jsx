@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import Gap from "../../gap/gap";
+import Gap from "../../gap/Gap";
 import "./FooterComponents.css";
 
 const FooterComponents = () => {
