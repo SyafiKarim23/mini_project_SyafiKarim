@@ -32,7 +32,7 @@ const LoginPage = () => {
     const isVerified = JSON.stringify(isUser) === JSON.stringify(values);
     if (isVerified) {
       localStorage.setItem("token", true);
-      navigate("/");
+      navigate("/aboutme");
     } else {
       Modal.warning({
         title: "Login Failed!",
@@ -94,7 +94,11 @@ const LoginPage = () => {
 
   return (
     <div className="container-center">
-      <Card title="Toko Pertanian MH Jaya" bodyStyle={{ width: "350px" }}>
+      <Card
+        name="login-form"
+        title="Toko Pertanian MH Jaya"
+        bodyStyle={{ width: "350px" }}
+      >
         <Row justify="center">
           <Radio.Group
             defaultValue="Login"

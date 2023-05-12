@@ -34,7 +34,9 @@ const HeaderComponents = () => {
             }}
             onClick={() => setCurrent("")}
           />
-          <>Toko Pertanian MH JAYA</>
+          <marquee className="Head" scrollamount="4" direction="down">
+            Toko Pertanian MH Jaya
+          </marquee>
         </Link>
 
         <Menu
@@ -47,17 +49,6 @@ const HeaderComponents = () => {
           selectedKeys={[current]}
         />
       </Row>
-      {/* <div className="Head">
-        <Input
-          placeholder="Search"
-          //   value={query}
-          //   onChange={handleChange}
-          style={{ marginRight: "10px", width: 180, height: 31 }}
-        />
-        <Button type="primary" htmlType="submit">
-          Search
-        </Button>
-      </div> */}
     </Header>
   );
 };

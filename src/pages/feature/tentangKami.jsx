@@ -45,7 +45,7 @@ const ReactCaptone = () => {
               <Gap height={10} />
               <div className="konten2">{product.teks2}</div>
               <a
-                href="https://alterrabills.id/"
+                href="https://www.google.com/maps/place/7%C2%B043'00.8%22S+112%C2%B016'36.0%22E/@-7.7170969,112.2765223,19z/data=!4m13!1m8!3m7!1s0x2e7867b7d40e209f:0x7201f1d2ee58753f!2sBulusari,+Kebondalem,+Kec.+Bareng,+Kabupaten+Jombang,+Jawa+Timur+61474!3b1!8m2!3d-7.7169693!4d112.2770775!16s%2Fg%2F11g64zlgcs!3m3!8m2!3d-7.7168889!4d112.2766667"
                 className="read-more"
                 target="_blank"
               >

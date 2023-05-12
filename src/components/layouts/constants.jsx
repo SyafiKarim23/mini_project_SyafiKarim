@@ -14,10 +14,6 @@ export const MENU_ITEM = [
     label: <Link to="/landingpage">Pembelian</Link>,
     key: "3",
   },
-  {
-    label: <Link to="/crudbarangpt">CRUD BARANG</Link>,
-    key: "4",
-  },
 
   {
     label: (
@@ -33,6 +29,6 @@ export const MENU_ITEM = [
         </Button>
       </Link>
     ),
-    key: "5",
+    key: "4",
   },
 ];

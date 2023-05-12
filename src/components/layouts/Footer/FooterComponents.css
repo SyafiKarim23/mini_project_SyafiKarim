@@ -1,9 +1,9 @@
-.Head{
-    font-size: 18px;
-    position: fixed;
+.footer{
     color: white;
+    font-size: 14px;
+    height: 100%;
+    position: sticky;
     font-family: "Lucida Console", "Courier New", monospace;
     font-style: normal;
-    margin-top: 0px;
-   
+    margin-bottom: 0px;
 }

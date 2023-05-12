@@ -1,19 +1,20 @@
 import React from "react";
 import { Layout } from "antd";
 import Gap from "../../gap/gap";
+import "./FooterComponents.css";
 
 const FooterComponents = () => {
   const { Footer } = Layout;
   return (
     <Footer
+      className="footer"
       style={{
         textAlign: "center",
         background: "green",
       }}
     >
-      Ant Design ©2023 Created by Ant UED
       <Gap />
-      <>© SyafiKarim 2023</>
+      <>© Toko Pertanian MH Jaya By: SyafiKarim 2023</>
     </Footer>
   );
 };
