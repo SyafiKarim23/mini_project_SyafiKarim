@@ -1,0 +1,9 @@
+.footer{
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    position: sticky;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-style: normal;
+    margin-bottom: 0px;
+}

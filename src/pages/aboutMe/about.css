@@ -1,0 +1,13 @@
+.user-card{
+   margin: 15px 15px 15px 15px;
+   border: none;
+}
+.namaBarang{
+   font-weight: bold;
+   font-size: 24px;
+}
+.harga{
+   color: green;
+   font-weight: bold;
+   text-align: right;
+}
