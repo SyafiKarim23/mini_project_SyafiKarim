@@ -31,8 +31,8 @@ const RouteManagement = () => {
             <Route path="/form" element={<FormComponents />} />
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/aboutme/:id" element={<AboutMe />} />
-            <Route path="/landingpage" element={<Landingpage />} />
-            <Route path="/crudbarangpt" element={<FormCRUD_graphpt />} />
+            <Route path="/belibarang" element={<Landingpage />} />
+            <Route path="/crudbarang" element={<FormCRUD_graphpt />} />
             <Route path="/feature" element={<ReactCaptone />} />
           </Routes>
         </LayoutComponent>

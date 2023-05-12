@@ -5,7 +5,7 @@ const Gform = () => {
     <div>
       {" "}
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSd0lu28Ok_9t6P-EZg6eirUEn6nfk7f_dX64pIsx5ww_6lf1w/viewform?usp=sf_link"
+        src="https://forms.gle/kr3QZQ4ekF7yFo7u7"
         width="640"
         height="1020"
         frameborder="0"

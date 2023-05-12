@@ -11,10 +11,9 @@ export const MENU_ITEM = [
     key: "2",
   },
   {
-    label: <Link to="/landingpage">Pembelian</Link>,
+    label: <Link to="/belibarang">Pembelian</Link>,
     key: "3",
   },
-
   {
     label: (
       <Link to="/">

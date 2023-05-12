@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./about.css";
 import LoadingComponent from "../../components/loadingComponent/loadingComponent";
-import { Card, Row, Col, Input } from "antd";
+import { Card, Row, Col, Button } from "antd";
 import { useQuery } from "@apollo/client";
 import { GET_BARANG } from "../CRUD/query/users-query-barang";
+
+function toUpperCaseFirstLetter(str) {
+  return str.replace(/\b[a-z]/g, function (match) {
+    return match.toUpperCase();
+  });
+}
 
 const about = () => {
   const {
@@ -25,8 +31,14 @@ const about = () => {
               <Card>
                 <div key={index}>
                   <img src={item.avatar} height={80} width={80} />
-                  <div className="namaBarang">{item.namaBarang}</div>
+                  {/* <div className="namaBarang">{item.namaBarang}</div> */}
+                  <div className="namaBarang">
+                    {toUpperCaseFirstLetter(item.namaBarang)}
+                  </div>
                   <hr />
+                  <Button type="primary" size="small" href="/belibarang">
+                    Beli
+                  </Button>
                   <div className="harga">Rp.{item.harga}</div>
                 </div>
               </Card>

@@ -215,44 +215,6 @@ const FormCRUD_graphpt = () => {
       <Title>Form CRUD Barang</Title>
 
       {/* Form */}
-      <Form.Item label="Avatar">
-        <Upload
-          showUploadList={false}
-          name="file"
-          maxCount={1}
-          onRemove={() => {
-            setAvatar("");
-          }}
-          customRequest={() => {}}
-          onChange={handleUpload}
-        >
-          <Button
-            icon={<UploadOutlined />}
-            type={!avatar ? "dashed" : "default"}
-          >
-            {avatar ? "Change Avatar" : "Upload Avatar"}
-          </Button>
-        </Upload>
-
-        {isLoadingUpload ? (
-          <LoadingComponent />
-        ) : (
-          avatar && (
-            <div>
-              <Gap height={20} />
-              <img
-                src={avatar}
-                alt="avatar"
-                style={{
-                  height: "150px",
-
-                  borderRadius: "10px",
-                }}
-              />
-            </div>
-          )
-        )}
-      </Form.Item>
       <Form
         name="form-bio"
         form={formBio}
@@ -270,6 +232,43 @@ const FormCRUD_graphpt = () => {
           span: 14,
         }}
       >
+        <Form.Item label="Upload Gambar">
+          <Upload
+            showUploadList={false}
+            name="file"
+            maxCount={1}
+            onRemove={() => {
+              setAvatar("");
+            }}
+            customRequest={() => {}}
+            onChange={handleUpload}
+          >
+            <Button
+              icon={<UploadOutlined />}
+              type={!avatar ? "dashed" : "default"}
+            >
+              {avatar ? "Change Gambar" : "Upload Gambar"}
+            </Button>
+          </Upload>
+
+          {isLoadingUpload ? (
+            <LoadingComponent />
+          ) : (
+            avatar && (
+              <div>
+                <Gap height={20} />
+                <img
+                  src={avatar}
+                  alt="avatar"
+                  style={{
+                    height: "150px",
+                    borderRadius: "10px",
+                  }}
+                />
+              </div>
+            )
+          )}
+        </Form.Item>
         <Form.Item
           name="namaBarang"
           label="Nama Barang"
@@ -297,7 +296,6 @@ const FormCRUD_graphpt = () => {
             placeholder="Isi Harga Barang"
             style={{ width: "100%" }}
           />
-          {/* <Input placeholder="Input your harga barang" /> */}
         </Form.Item>
 
         {isEdit ? (
