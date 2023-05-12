@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import Gform from "../Gform/Gform";
-import Gap from "../../components/gap/gap";
+import Gap from "../../components/gap/Gap";
 
 const Landingpage = () => {
   const navigate = useNavigate();
