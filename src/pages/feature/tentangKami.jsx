@@ -3,7 +3,7 @@ import { PRODUCT_DATA } from "./constant";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Col, Row, Card } from "antd";
 import "./tentangKami.css";
-import Gap from "../../components/gap/gap";
+import Gap from "../../components/gap/Gap";
 
 const ReactCaptone = () => {
   return (
